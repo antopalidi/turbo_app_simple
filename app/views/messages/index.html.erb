@@ -1,6 +1,10 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Messages</h1>
+<h1>Messages
+<span id='message_counter'>
+  <%= @messages.count %>
+</span>
+</h1>
 
 <div id="new_message">
   <%= render partial: 'messages/form', locals: { message: Message.new } %>
@@ -15,5 +19,3 @@
     </p>
   <% end %>
 </div>
-
-<%= link_to "New message", new_message_path %>
